@@ -8,10 +8,9 @@ import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class JoiningThread {
+    static List<Long> inputNumbers = Arrays.asList(200L, 3435L, 2324L, 4656L, 23L, 5556L);
+    static List<Thread> threads=new ArrayList<>();
     public static void main(String[] args) throws InterruptedException {
-        List<Long> inputNumbers = Arrays.asList(200L, 3435L, 2324L, 4656L, 23L, 5556L);
-
-        List<Thread> threads=new ArrayList<>();
         for( Long inputNumber : inputNumbers) {
             threads.add(new FactoralNumber(inputNumber));
         }
